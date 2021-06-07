@@ -1,8 +1,8 @@
 /*!
- * CDOM v0.1.0
+ * CDOM v0.1.0 (https://github.com/AmbroseCavalier/cdom)
  *
  * Copyright 2021 Ambrose Cavalier
- * Licensed under MIT
+ * Licensed under the MIT (https://github.com/AmbroseCavalier/cdom/blob/master/LICENSE)
  */
 
 type Primitive = string | number | boolean | undefined | null;
