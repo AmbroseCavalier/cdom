@@ -1,5 +1,5 @@
 /*!
- * CDOM v0.1.0 (https://github.com/AmbroseCavalier/cdom)
+ * CDOM v0.1.1 (https://github.com/AmbroseCavalier/cdom)
  *
  * Copyright 2021 Ambrose Cavalier
  * Licensed under the MIT (https://github.com/AmbroseCavalier/cdom/blob/master/LICENSE)
@@ -91,6 +91,9 @@ function createElementFromParams(
 		for (const attributeName in attrs) {
 			const val = attrs[attributeName];
 			if (attributeName.startsWith("on")) {
+				if (val === null || val === undefined) {
+					continue
+				}
 				if (typeof val !== "function") {
 					throw new Error(`Got non-function for "${attributeName}".`);
 				}
